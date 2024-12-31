@@ -9,6 +9,7 @@ import {
   LanguageMenuButton,
   LogoContainer,
   NavbarContainer,
+  NavbarLogoContainer,
   NavContainer,
 } from './styles';
 
@@ -34,8 +35,10 @@ export function Header({handleScrollIntoView, handleChangeLanguage} : HeaderType
 
   return (
     <HeaderContainer>
-      <NavbarContainer>
+      <NavbarLogoContainer>
         <LogoContainer src={Logo}/>
+      </NavbarLogoContainer>
+      <NavbarContainer>
         <NavContainer>
           <ul>
             <li onClick={ScrollIntoView} id='Experiences'>{Language.NavContainerLiExperiences}</li>

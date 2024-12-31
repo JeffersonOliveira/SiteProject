@@ -19,7 +19,7 @@ export const HeaderContainer = styled.header`
   }
 `
 
-export const NavbarContainer = styled.div`
+export const NavbarLogoContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,6 +28,18 @@ export const NavbarContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    gap: 0.625rem;
+  }
+`
+export const NavbarContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 2.25rem 0 0 0;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
     gap: 0.625rem;
   }
 `
@@ -57,28 +69,31 @@ export const NavContainer = styled.nav`
 `
 
 export const LanguageContainer = styled.span<LanguageContainerType>`
+  width: 100%;
   display: flex;
   gap: 0.75rem;
 
-  ${props => {
-      if(props.colapsed) {
-        return (
-          `
-          flex-direction: row-reverse;
-          `
-        )
-      } 
-      else {
-        return (
-          `
-          flex-direction: row;
-          `
-        )
-      }
-    }}
-  
+  @media screen and (min-width: 769px) {
+    ${props => {
+        if(props.colapsed) {
+          return (
+            `
+            flex-direction: row-reverse;
+            `
+          )
+        } 
+        else {
+          return (
+            `
+            flex-direction: row;
+            `
+          )
+        }
+    }}  
+  }
 
-  ul{
+  ul{    
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -108,8 +123,8 @@ export const LanguageContainer = styled.span<LanguageContainerType>`
   }
 
   @media screen and (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
+    align-items: end;
+    flex-direction: row-reverse;
   }
 `
 export const LanguageMenuButton = styled.button`
