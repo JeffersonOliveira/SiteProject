@@ -68,8 +68,7 @@ export const NavContainer = styled.nav`
   }
 `
 
-export const LanguageContainer = styled.span<LanguageContainerType>`
-  width: 100%;
+export const LanguageContainer = styled.span<LanguageContainerType>`  
   display: flex;
   gap: 0.75rem;
 
@@ -93,7 +92,6 @@ export const LanguageContainer = styled.span<LanguageContainerType>`
   }
 
   ul{    
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,9 +118,14 @@ export const LanguageContainer = styled.span<LanguageContainerType>`
         )
       }
     }}
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   @media screen and (max-width: 768px) {
+    width: 100%;
     align-items: end;
     flex-direction: row-reverse;
   }
