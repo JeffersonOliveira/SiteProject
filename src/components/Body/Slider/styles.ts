@@ -8,6 +8,15 @@ export const SliderContainer = styled.section`
   justify-content: center;
   align-items: center;
 
+  .swiper-slide {
+    display: flex;
+    justify-content: center;    
+  }
+
+  .googleCert {
+    height: 203px;
+  }
+
   @media screen and (max-width: 768px) {
     img {
       width: 100%;

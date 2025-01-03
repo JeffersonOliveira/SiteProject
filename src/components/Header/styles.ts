@@ -12,33 +12,42 @@ interface LanguageContainerType {
 
 export const HeaderContainer = styled.header`
   width: 100%;
-  padding: 0 13.54%;
-
-  @media screen and (max-width: 768px) {
-    padding: 0 10%;
-  }
-`
-
-export const NavbarLogoContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  padding: 2.25rem 0 0 0;
+  padding: 0 7.27% 0 13.54%;
+  gap: 200px;
+  background-color: black;
+  color: #00A0C1;
+  position: fixed;
+  z-index: 2;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 8px;
 
   @media screen and (max-width: 768px) {
+    padding: 0 10%;
     flex-direction: column;
     gap: 0.625rem;
   }
 `
+
+export const NavbarLogoContainer = styled.div`
+  padding: 2.25rem 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem 0 0 0;
+  }
+`
 export const NavbarContainer = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   
-  padding: 2.25rem 0 0 0;
+  padding: 2.25rem 0;
 
   @media screen and (max-width: 768px) {
+    padding: 0 0  1rem 0;
     flex-direction: column-reverse;
     gap: 0.625rem;
   }
@@ -121,6 +130,7 @@ export const LanguageContainer = styled.span<LanguageContainerType>`
 
     @media screen and (max-width: 768px) {
       width: 100%;
+      padding: 0 0 0 2.25rem;
     }
   }
 
@@ -131,12 +141,13 @@ export const LanguageContainer = styled.span<LanguageContainerType>`
   }
 `
 export const LanguageMenuButton = styled.button`
-  width: 25px;
-  height: 25px;
   background: none;
   border: none;
   border-radius: 8px;
+  color: ${props => props.theme.secondaryColor1};
   cursor: pointer;
+  height: 25px;
+  width: 25px;
 
   text-align: center;  
   line-height: 1.875rem;

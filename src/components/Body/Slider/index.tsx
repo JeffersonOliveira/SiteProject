@@ -6,6 +6,8 @@ import Cert1 from '../../../assets/Certifications/certifiedAssociate.png';
 import Cert2 from '../../../assets/Certifications/certifiedPlatformAppBuilder.png';
 import Cert3 from '../../../assets/Certifications/certifiedPlatformDevI.png';
 import Cert4 from '../../../assets/Certifications/certifiedAdministrator.png';
+import Cert5 from '../../../assets/Certifications/googleAnalyticsCertification.png';
+import Cert6 from '../../../assets/Certifications/certifiedMarketingCloudEmailSpecialist.png';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
@@ -22,6 +24,9 @@ export function Slider() {
     if(screenWidth <= 768) {
       setSlidesPerView(1)
       setDelay(3000)
+    } else if(screenWidth >= 769 &&  screenWidth <= 911) {
+      setSlidesPerView(2)
+      setDelay(4000)
     } else {
       setSlidesPerView(3)
       setDelay(5000)
@@ -57,6 +62,8 @@ export function Slider() {
         <SwiperSlide><img src={Cert2}/></SwiperSlide>
         <SwiperSlide><img src={Cert3}/></SwiperSlide>
         <SwiperSlide><img src={Cert4}/></SwiperSlide>
+        <SwiperSlide><img src={Cert5} className='googleCert'/></SwiperSlide>
+        <SwiperSlide><img src={Cert6}/></SwiperSlide>
       </Swiper>
     </SliderContainer>
   )
